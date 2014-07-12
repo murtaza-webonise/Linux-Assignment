@@ -1,0 +1,380 @@
+host name is webonise-desktop
+Fri Jul 11 20:43:10 IST 2014
+version and type of os
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=12.04
+DISTRIB_CODENAME=precise
+DISTRIB_DESCRIPTION="Ubuntu 12.04.2 LTS"
+NAME="Ubuntu"
+VERSION="12.04.2 LTS, Precise Pangolin"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu precise (12.04.2 LTS)"
+VERSION_ID="12.04"
+Fri Jul 11 20:43:26 IST 2014
+path to workind directory is /home/webonise
+Fri Jul 11 20:43:51 IST 2014
+other users are logged into the machine
+ 20:45:01 up  6:28,  2 users,  load average: 0.04, 0.09, 0.13
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
+webonise tty7                      14:17    6:27m  7:39   0.36s gnome-session -
+webonise pts/0    :0               18:57    0.00s  1.14s  0.00s w
+Fri Jul 11 20:45:06 IST 2014
+Fri Jul 11 20:50:33 IST 2014
+webonise adm cdrom sudo dip plugdev lpadmin sambashare
+Fri Jul 11 20:51:33 IST 2014
+files are located in your home directory and all its subdirectories
+/home/webonise:
+a.txt
+bagwalla
+bagwalla.pub
+b.txt
+CCPP
+Desktop
+Documents
+Downloads
+examples.desktop
+functional.odt
+google-chrome-stable_current_amd64.deb
+google-chrome-stable_current_i386.deb
+google-chrome-stable_current_i386.deb.1
+history
+history~
+mozilla.pdf
+murtaza
+murtaza.pub
+Music
+newa.txt
+newb.txt
+Pictures
+Public
+Templates
+Videos
+
+/home/webonise/CCPP:
+HelloWorld
+HelloWorld.tar.gz
+
+/home/webonise/CCPP/HelloWorld:
+binding.rb
+binding.rb~
+check.cpp
+check.cpp~
+checkj.cpp
+checkj.cpp~
+checkp.cpp
+checkp.cpp~
+class.smtp.php
+class.smtp.php~
+College.java
+College.java~
+HelloWorldCPP
+main.c
+main.c~
+main.cpp
+main.cpp~
+mr.java~
+myClass.php
+myClass.php~
+nm
+nmp
+nmpq
+RectangleDemo~
+Student.java
+Student.java~
+Untitled Document~
+
+/home/webonise/Desktop:
+10368485_10152211821858803_3068293681317267503_n.jpg
+10488951_665149990221046_936130717_n.jpg
+assesment.odt
+ChatApp(1).jpg
+chatmurtaza.docx
+design patterns
+Dolomites-in-the-Alto-Adige-Region.jpg
+form.docx
+frrr.odt
+mozilla.pdf
+Murtaza
+nrdbms.odt
+Pivot.sql
+Untitled Folder
+
+/home/webonise/Desktop/design patterns:
+Addison Wesley - Design Patterns Explained (2001).pdf
+DesignPatterns.pdf
+desptn.pdf
+ora_as3_design_patterns_ch12.pdf
+Principles_and_Patterns.pdf
+
+/home/webonise/Desktop/Murtaza:
+1981818_683950948318093_466058321_n.jpg
+antfarm(2).jpg
+assignments
+functional.odt
+virtualcollege.jpg
+
+/home/webonise/Desktop/Murtaza/assignments:
+assignment.log
+assignments.log
+assign.txt
+master.txt
+newassign.txt
+newmaster.txt
+newnewxam.txt
+newxam
+newxam.txt
+newxen
+newxtra
+neymar
+
+/home/webonise/Desktop/Untitled Folder:
+
+/home/webonise/Documents:
+form1.docx
+form.docx
+learning.odt
+linux.odt
+
+/home/webonise/Downloads:
+2.Object Oriented Programming.ppt
+antfarm(1).jpg
+antfarm.jpg
+ChatApp
+ChatApp(1).jpg
+ChatApp.jpg
+google-chrome-stable_current_i386
+google-chrome-stable_current_i386.deb
+HelloWorld
+HelloWorld.tar.gz
+Murtaza Assignment
+skype-ubuntu-precise_4.3.0.37-1_i386.deb
+
+/home/webonise/Downloads/google-chrome-stable_current_i386:
+DEBIAN
+etc
+opt
+usr
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/DEBIAN:
+control
+postinst
+postrm
+prerm
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/etc:
+cron.daily
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/etc/cron.daily:
+google-chrome
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt:
+google
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google:
+chrome
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome:
+chrome
+chrome_100_percent.pak
+chrome-sandbox
+cron
+default-app-block
+default_apps
+google-chrome
+icudtl.dat
+lib
+libffmpegsumo.so
+libpdf.so
+libppGoogleNaClPluginChrome.so
+libwidevinecdmadapter.so
+libwidevinecdm.so
+locales
+nacl_helper
+nacl_helper_bootstrap
+nacl_irt_x86_32.nexe
+PepperFlash
+product_logo_128.png
+product_logo_16.png
+product_logo_22.png
+product_logo_24.png
+product_logo_256.png
+product_logo_32.png
+product_logo_32.xpm
+product_logo_48.png
+product_logo_64.png
+resources.pak
+xdg-mime
+xdg-settings
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome/cron:
+google-chrome
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome/default_apps:
+docs.crx
+drive.crx
+external_extensions.json
+gmail.crx
+search.crx
+youtube.crx
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome/lib:
+libpeerconnection.so
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome/locales:
+am.pak
+ar.pak
+bg.pak
+bn.pak
+ca.pak
+cs.pak
+da.pak
+de.pak
+el.pak
+en-GB.pak
+en-US.pak
+es-419.pak
+es.pak
+et.pak
+fa.pak
+fil.pak
+fi.pak
+fr.pak
+gu.pak
+he.pak
+hi.pak
+hr.pak
+hu.pak
+id.pak
+it.pak
+ja.pak
+kn.pak
+ko.pak
+lt.pak
+lv.pak
+ml.pak
+mr.pak
+ms.pak
+nb.pak
+nl.pak
+pl.pak
+pt-BR.pak
+pt-PT.pak
+ro.pak
+ru.pak
+sk.pak
+sl.pak
+sr.pak
+sv.pak
+sw.pak
+ta.pak
+te.pak
+th.pak
+tr.pak
+uk.pak
+vi.pak
+zh-CN.pak
+zh-TW.pak
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/opt/google/chrome/PepperFlash:
+libpepflashplayer.so
+manifest.json
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr:
+bin
+share
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/bin:
+google-chrome-stable
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share:
+applications
+doc
+gnome-control-center
+man
+menu
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/applications:
+google-chrome.desktop
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/doc:
+google-chrome
+google-chrome-stable
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/doc/google-chrome:
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/doc/google-chrome-stable:
+changelog.gz
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/gnome-control-center:
+default-apps
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/gnome-control-center/default-apps:
+google-chrome.xml
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/man:
+man1
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/man/man1:
+google-chrome.1
+
+/home/webonise/Downloads/google-chrome-stable_current_i386/usr/share/menu:
+google-chrome.menu
+
+/home/webonise/Downloads/HelloWorld:
+binding.rb
+binding.rb~
+check.cpp
+check.cpp~
+checkj.cpp
+checkj.cpp~
+checkp.cpp
+checkp.cpp~
+class.smtp.php
+class.smtp.php~
+College.java
+College.java~
+HelloWorldCPP
+main.c
+main.c~
+main.cpp
+main.cpp~
+mr.java~
+myClass.php
+myClass.php~
+nm
+nmp
+nmpq
+RectangleDemo~
+Student.java
+Student.java~
+Untitled Document~
+
+/home/webonise/Downloads/Murtaza Assignment:
+antfarm(2).jpg
+virtualcollege.jpg
+
+/home/webonise/Music:
+
+/home/webonise/Pictures:
+
+/home/webonise/Public:
+
+/home/webonise/Templates:
+
+/home/webonise/Videos:
+Fri Jul 11 20:53:35 IST 2014
+a bash script to rename the all files with extension .txt inside your assignment directory and list them on console.
+`newnewassign.txt' -> `newnewnewassign.txt'
+`newnewmaster.txt' -> `newnewnewmaster.txt'
+`newnewnewxam.txt' -> `newnewnewnewxam.txt'
+`newnewxam.txt' -> `newnewnewxam.txt'
+Fri Jul 11 20:57:40 IST 2014
+output of a bash script to rename the all files with extension .txt inside your assignment directory and list them on console.
+`xam' -> `newxam'
+`xen' -> `newxen'
+`xtra' -> `newxtra'
+Fri Jul 11 21:00:41 IST 2014
+creating a directory name as public_html.
+Sat Jul 12 16:28:03 IST 2014
+creating a file inside public_html name as readme.txt.
