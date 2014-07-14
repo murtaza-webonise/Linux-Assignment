@@ -49,7 +49,10 @@ var color="";
 var i;
 
 $(document).ready(function(){
+
   $(".button").click(function(){
+  
+  
    if(color=="")
    alert("please select a color");
    else {
@@ -98,10 +101,27 @@ $(document).ready(function() {
         r2.checked=false;
          r3.checked=false;
        
-       //alert(color);
-       //color="";
-       //alert(color);
-       location.reload();
+   
+       color="";
+       
+       
+       $(".button").click(function(){
+  
+  
+   if(color=="")
+   alert("please select a color");
+   else {
+  if(this.value==" ")
+  { 
+  $(this).css("background-color",color);
+  this.value=color;
+  }
+  else
+  alert("already Colouredwith colour "+this.value);
+  }
+  });
+       
+      
        
        
        
