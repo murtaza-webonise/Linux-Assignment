@@ -1,0 +1,272 @@
+
+<html>
+<head> 
+<style> 
+#p { 
+position:absolute; 
+top:250px; 
+ 
+ 
+border:2px solid blue; 
+padding:6px; 
+} 
+
+#canvas { 
+position:absolute; 
+top:28px; 
+left:350px; 
+border:2px solid blue; 
+padding:6px;
+} 
+</style> 
+
+<script type="text/javascript"> 
+
+function getPdata( arg ) 
+
+{
+ if ( 'default' == arg) 
+    { 
+    location.reload();
+    } 
+    
+    if ( 'Submit' == arg) 
+    {
+    
+    lineObj.lineMethod();
+    
+    }
+    
+
+
+}
+
+
+
+
+
+var lineObj = {   
+
+
+ lineMethod: function() 
+
+    { 
+    
+    
+var f = document.getElementById( 'pForm' ); 
+    var showx,showy,showc;
+    var e = f.eq.value; 
+    var s = parseInt( f.s.value );
+    var s1 = parseInt( f.s1.value );
+    var e1 = parseInt( f.e1.value );  
+    var x1,y1;
+
+ 
+    var posx = e.indexOf("x");
+    if(posx==0)
+    showx=1;
+    else
+    showx = e.charAt(posx-1);
+
+    var posy = e.indexOf("y"); 
+    if(posy==0)
+    showy=1;
+    else
+    showy = e.charAt(posy-1);
+    
+    if(e.charAt(e.length-1)=='x'||e.charAt(e.length-1)=='y')
+    showc=0;
+    else
+    showc = parseInt(e.charAt(e.length-1));
+
+      if(showx==' '||showx=='-'||showx=='+'||showx=='=')
+         {
+          if(showx=='-')
+          showx=-1;
+          else
+          showx=1;
+         }
+      
+      if(showy==' '||showy=='-'||showy=='+'||showy=='=')
+        {
+          if(showy=='-')
+          showy=-1;
+          else
+          showy=1;
+        }
+
+      if(e.charAt(posx-2)=='-')
+      showx=-showx;
+      else
+      {
+      if(e.charAt(posx-2)!='='&&e.charAt(posx-2)!=' '&&e.charAt(posx-2)!='y')
+      showx=e.charAt(posx-2).concat(showx);
+      }
+
+
+     if(e.charAt(posy-2)=='-')
+     showy=-showy;
+     else
+     {
+       if(e.charAt(posy-2)!='='&&e.charAt(posy-2)!=' '&&e.charAt(posy-2)!='x')
+       showy=e.charAt(posy-2).concat(showy);
+     }
+
+    if(e.indexOf('=')>e.indexOf('x'))
+    showx=-showx;
+
+alert(showx+" "+showy);
+
+
+
+
+     var temp=e1-s1;
+     var step=temp/s;
+  
+     var i=1;
+     x=s1;
+
+     for(var t=s1;t<=e1;t++)
+     {
+
+          if(showy==1||showy==-1)
+
+           {
+           if(showy==-1)
+           y=-showx*x-showc;
+           else
+           y=showx*x+showc;
+           }
+           else
+           y=(showx*x+showc)/showy;
+
+
+           x1=x*20;
+           y1=y*20;
+
+alert(x1+" "+y1);
+           if(i==1)
+           ctx.moveTo(x1,y1);
+           else
+           ctx.lineTo(x1,y1);
+
+           ctx.fillText("* "+x1+" "+y1,x1,y1);
+           i++;
+
+
+           x=x+step;
+      }
+
+
+         ctx.lineWidth = 2;
+         ctx.strokeStyle = '#000000';
+
+         ctx.stroke();
+         ctx.move(0,0);
+
+
+
+
+
+
+       } 
+} ;
+
+
+
+
+</script> 
+</head> 
+<body>
+<canvas id="canvas" width="1120" height="800" >
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+
+var canvas=document.getElementById('canvas');
+var ctx=canvas.getContext('2d');
+
+ctx.translate(canvas.width/2, canvas.height/2);
+ctx.scale(1, -1);
+
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(560, 0);
+ctx.fillText("X",560,0);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,400);
+ctx.fillText("Y",0,400);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,-400);
+ctx.fillText("-Y",0,-400);
+ctx.moveTo(0,0);
+ctx.lineTo(-560,0);
+ctx.fillText("-X",-560,0);
+ctx.lineWidth = 3;  
+ctx.strokeStyle = '#000000';    
+
+
+
+ctx.stroke();
+
+for(var i=20;i<=800;)
+{
+ctx.moveTo(-560,i);
+ctx.lineTo(560,i);
+
+i=i+20;
+
+}
+
+for( i=20;i<=800;)
+{
+ctx.moveTo(-560,-i);
+ctx.lineTo(560,-i);
+
+i=i+20;
+
+}
+
+for( i=20;i<=560;)
+{
+ctx.moveTo(i,560);
+ctx.lineTo(i,-560);
+
+i=i+20;
+
+}
+for( i=20;i<=560;)
+{
+ctx.moveTo(-i,560);
+ctx.lineTo(-i,-560);
+
+i=i+20;
+
+}
+
+
+
+ctx.lineWidth = 1;  
+ctx.strokeStyle = '#000000';    
+
+
+
+ctx.stroke();
+ctx.moveTo(0,0);
+</script>
+
+
+
+
+<div id="p"> 
+<form id="pForm"> 
+Equation: <input type="text" name="eq" /><br><br> 
+Step: <input type="text" name="s" /><br><br> 
+Start point: <input type="text" name="s1" /><br><br> 
+End point: <input type="text" name="e1" /><br><br> 
+<center><input type="button" value="Submit" onClick="getPdata(this.value)" /> 
+<input type="button" value="default" onClick="getPdata( this.value )" /> 
+ </center>
+</form> 
+</div> 
+</body> 
+</html>
