@@ -34,7 +34,7 @@ function getPdata( arg )             //this is called by reset and submit button
     {
     
     lineObj.lineMethod();
-                                          //here we call methos of lineObj
+                                          //here we call method of lineObj
     }
     
 
@@ -62,62 +62,12 @@ var f = document.getElementById( 'pForm' );
     var x1,y1;
 
  
-    var posx = e.indexOf("x");
-    if(posx==0)
-    showx=1;
-    else
-    showx = e.charAt(posx-1);
-
-    var posy = e.indexOf("y"); 
-    if(posy==0)
-    showy=1;
-    else
-    showy = e.charAt(posy-1);
-    
-    if(e.charAt(e.length-1)=='x'||e.charAt(e.length-1)=='y')
-    showc=0;
-    else
-    showc = parseInt(e.charAt(e.length-1));
-
-      if(showx==' '||showx=='-'||showx=='+'||showx=='=')
-         {
-          if(showx=='-')
-          showx=-1;
-          else
-          showx=1;
-         }
-      
-      if(showy==' '||showy=='-'||showy=='+'||showy=='=')
-        {
-          if(showy=='-')
-          showy=-1;
-          else
-          showy=1;
-        }
-
-      if(e.charAt(posx-2)=='-')
-      showx=-showx;
-      else
-      {
-      if(e.charAt(posx-2)!='='&&e.charAt(posx-2)!=' '&&e.charAt(posx-2)!='y')
-      showx=e.charAt(posx-2).concat(showx);
-      }
-
-
-     if(e.charAt(posy-2)=='-')
-     showy=-showy;
-     else
-     {
-       if(e.charAt(posy-2)!='='&&e.charAt(posy-2)!=' '&&e.charAt(posy-2)!='x')
-       showy=e.charAt(posy-2).concat(showy);
-     }
-
-    if(e.indexOf('=')>e.indexOf('x'))
-    showx=-showx;
-
-alert(showx+" "+showy);
-
-
+   
+     var codes = lineParse(e);             //here is the call to object function lineParse() for parsing an equation
+     showx = codes[0];
+     showy = codes[1];
+     showc = codes[2];
+  
 
 
      var temp=e1-s1;
@@ -144,7 +94,7 @@ alert(showx+" "+showy);
            x1=x*20;
            y1=y*20;
 
-alert(x1+" "+y1);
+
            if(i==1)
            ctx.moveTo(x1,y1);
            else
@@ -172,6 +122,75 @@ alert(x1+" "+y1);
        } 
 } ;
 
+var lineParse=function(args)                                      //here is the object function lineParse() which takes equation as argument
+       
+       
+       {
+       
+         var showx,showy,showc;
+
+ 
+    var posx = args.indexOf("x");
+    if(posx==0)
+    showx=1;
+    else
+    showx = args.charAt(posx-1);
+
+    var posy = args.indexOf("y"); 
+    if(posy==0)
+    showy=1;
+    else
+    showy = args.charAt(posy-1);
+    
+    if(args.charAt(args.length-1)=='x'||args.charAt(args.length-1)=='y')
+    showc=0;
+    else
+    showc = parseInt(args.charAt(args.length-1));
+
+      if(showx==' '||showx=='-'||showx=='+'||showx=='=')
+         {
+          if(showx=='-')
+          showx=-1;
+          else
+          showx=1;
+         }
+      
+      if(showy==' '||showy=='-'||showy=='+'||showy=='=')
+        {
+          if(showy=='-')
+          showy=-1;
+          else
+          showy=1;
+        }
+
+      if(args.charAt(posx-2)=='-')
+      showx=-showx;
+      else
+      {
+      if(args.charAt(posx-2)!='='&&args.charAt(posx-2)!=' '&&args.charAt(posx-2)!='y')
+      showx=args.charAt(posx-2).concat(showx);
+      }
+
+
+     if(args.charAt(posy-2)=='-')
+     showy=-showy;
+     else
+     {
+       if(args.charAt(posy-2)!='='&&args.charAt(posy-2)!=' '&&args.charAt(posy-2)!='x')
+       showy=args.charAt(posy-2).concat(showy);
+     }
+
+    if(args.indexOf('=')>args.indexOf('x'))
+    showx=-showx;
+
+
+return [showx,showy,showc];  
+
+
+       
+       };
+       
+       
 
 
 
