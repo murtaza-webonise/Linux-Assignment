@@ -22,7 +22,7 @@ padding:6px;
 
 <script type="text/javascript"> 
 
-function getPdata( arg ) 
+function getPdata( arg )             //this is called by reset and submit button
 
 {
  if ( 'default' == arg) 
@@ -34,7 +34,7 @@ function getPdata( arg )
     {
     
     lineObj.lineMethod();
-    
+                                          //here we call methos of lineObj
     }
     
 
@@ -48,7 +48,7 @@ function getPdata( arg )
 var lineObj = {   
 
 
- lineMethod: function() 
+ lineMethod: function()                //here is the method of lineObj that is lineMethod
 
     { 
     
