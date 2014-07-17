@@ -11,6 +11,7 @@
 <div id="div1" >
 <input type="radio" name="rd" id="r1" value="red" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' " > Red</label>
 <input type="radio" name="rd" id="r2" value="green" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' "> Green</label>
+
 <input type="radio" name="rd" id="r3" value="blue" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' "> Blue</label>
 </div>
 <div>
