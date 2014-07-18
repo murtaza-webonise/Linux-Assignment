@@ -1,0 +1,14 @@
+#division { 
+position:absolute; 
+top:250px; 
+border:2px solid blue; 
+padding:6px; 
+} 
+
+#canvas { 
+position:absolute; 
+top:28px; 
+left:350px; 
+border:2px solid blue; 
+padding:6px;
+} 

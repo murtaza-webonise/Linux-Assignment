@@ -71,7 +71,7 @@ ctx.moveTo(0,0);
 
 
 <div id="division">  
-  <form id="divform"> 
+  <form id="divForm"> 
     Equation: <input type="text" name="eq" /><br><br> 
     Step: <input type="text" name="step" /><br><br> 
     Start point: <input type="text" name="s_point" /><br><br> 
