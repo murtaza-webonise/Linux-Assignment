@@ -7,8 +7,15 @@ function getformdata( arg )             //this is called by reset and submit but
     
   if ( 'Submit' == arg) 
   {
+    var form = document.getElementById( 'divform' ); 
     
-    lineObj.lineMethod();
+    var equation = form.eq.value; 
+    var s = parseInt( form.step.value );
+    var s_point = parseInt( form.s_point.value );
+    var e_point = parseInt( form.e_point.value );  
+    
+    lineObj.equationParse(equation);             //here is the call to object function lineParse() for parsing an equation
+    lineObj.lineDraw(s_point,e_point,s);
                                           //here we call method of lineObj
   }
     
@@ -16,64 +23,11 @@ function getformdata( arg )             //this is called by reset and submit but
 
 var lineObj = {   
 
-  lineMethod: function()                //here is the method of lineObj that is lineMethod
-
-  { 
-    var form = document.getElementById( 'divform' ); 
-    var showx,showy,showc;
-    var equation = form.eq.value; 
-    var s = parseInt( form.step.value );
-    var s_point = parseInt( form.s_point.value );
-    var e_point = parseInt( form.e_point.value );  
-    var x1,y1,x,y;
-    var codes = lineParse(equation);             //here is the call to object function lineParse() for parsing an equation
-    showx = codes[0];
-    showy = codes[1];
-    showc = codes[2];
-    var temp=e_point-s_point;
-    var step=temp/s;
-    var count=1;
-    x=s_point;
-
-  for(var count1=s_point;count1<=e_point;count1++)
-  {
-
-    if(showy==1||showy==-1)
-    {
-      if(showy==-1)
-        y=-showx*x-showc;
-      else
-        y=showx*x+showc;
-    }
-    else
-      y=(showx*x+showc)/showy;
-      alert(y)
-    
-    x1=x*20;
-    y1=y*20;
-    alert(x1+" "+y1);
-    if(count==1)
-      ctx.moveTo(x1,y1);
-    else
-      ctx.lineTo(x1,y1);
-
-    ctx.fillText("* "+x1+" "+y1,x1,y1);
-    count++;
-    x=x+step;
-  }
-
-
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = '#000000';
-  ctx.stroke();
-  ctx.move(0,0);
-
-  } 
-} ;
-
-var lineParse=function(args)                                      //here is the object function lineParse() which takes equation as argument
-{
-  var showx,showy,showc;
+  
+  
+  equationParse:function(args)                                      //here is the object function lineParse() which takes equation as argument
+{ 
+  
   var posx = args.indexOf("x");
   
   if(posx==0)
@@ -129,12 +83,64 @@ var lineParse=function(args)                                      //here is the 
   if(args.indexOf('=')>args.indexOf('x'))
     showx=-showx;
 
-
-  return [showx,showy,showc];  
+//alert(showx+" "+showy+" "+showc);
+  //return [showx,showy,showc];  
 
 
        
-};
+},
        
        
+  
+  
+  lineDraw: function(s_point,e_point,s)                //here is the method of lineObj that is lineMethod
+
+  { 
+    var x1,y1,x,y;
+    var temp=e_point-s_point;
+    var step=temp/s;
+    var count=1;
+    x=s_point;
+
+  for(var count1=s_point;count1<=e_point;count1++)
+  {
+
+    if(showy==1||showy==-1)
+    {
+      if(showy==-1)
+        y=-showx*x-showc;
+      else
+        y=showx*x+showc;
+    }
+    else
+      y=(showx*x+showc)/showy;
+      
+    
+    x1=x*20;
+    y1=y*20;
+   
+    if(count==1)
+      ctx.moveTo(x1,y1);
+    else
+      ctx.lineTo(x1,y1);
+
+    ctx.fillText("* "+x1+" "+y1,x1,y1);
+    count++;
+    x=x+step;
+  }
+
+
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#000000';
+  ctx.stroke();
+  ctx.move(0,0);
+
+  } , showx:0,showy:0,showc:0
+  
+  
+  
+  
+} ;
+
+
 

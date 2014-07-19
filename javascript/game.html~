@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<title>Number Game</title>
+<link rel="stylesheet" type="text/css" href="game.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+</head>
+<body>
+
+<div id="div1" >
+<input type="radio" name="rd" id="r1" value="red" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' " > Red</label>
+<input type="radio" name="rd" id="r2" value="green" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' "> Green</label>
+<input type="radio" name="rd" id="r3" value="blue" onclick="myfunction(this.value)" /><label style="font-size: 25px;font-style:normal;font-family:'Comic Sans MS' "> Blue</label>
+</div>
+<div>
+  <table  id="nam" border="1">
+    <tr>
+      <td class="middle" id="1"><button  class="button" id="a1" name=" " value=" " >1</button></td>
+      <td class="middle" id="2"><button  class="button" id="a2" name=" " value=" " >2</button></td>
+      <td class="middle" id="3"><button  class="button" id="a3" name=" " value=" " >3</button></td>
+    </tr>
+
+    <tr>
+      <td class="middle" id="4"><button   class="button" id="a4" name=" " value=" " >4</button></td>
+      <td  class="middle" id="5"><button   class="button" id="a5" name=" " value=" ">5</button></td> 
+      <td  class="middle" id="6"><button   class="button" id="a6" name=" " value=" ">6</button></td>
+   
+    </tr>
+  
+    <tr>
+      <td  class="middle" id="7"><button   class="button" id="a7" name=" " value=" " >7</button></td>
+      <td  class="middle" id="8"><button   class="button" id="a8" name=" " value=" " >8</button></td>
+      <td  class="middle" id="9"><button  class="button" id="a9" name=" " value=" " >9</button></td>
+    </tr>
+
+  
+  </table>
+		
+</div>
+		
+<div id="div">
+		
+  <input type="reset" name="r" id="r" value="Reset" />
+	<input type="button" name="rdDate" id="shuffle" value="Shuffle" />
+		
+</div>
+		
+
+       
+
+
+
+
+</body>
+</html>
