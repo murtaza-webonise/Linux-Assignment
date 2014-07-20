@@ -1,0 +1,86 @@
+
+<html>
+<head> 
+<link rel="stylesheet" type="text/css" href="line.css">
+<script src="line.js"></script>
+</head> 
+<body>
+<canvas id="canvas" width="1120" height="800" >
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+var canvas=document.getElementById('canvas');
+var ctx=canvas.getContext('2d');
+ctx.translate(canvas.width/2, canvas.height/2);
+ctx.scale(1, -1);
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(560, 0);
+ctx.fillText("X",560,0);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,400);
+ctx.fillText("Y",0,400);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,-400);
+ctx.fillText("-Y",0,-400);
+ctx.moveTo(0,0);
+ctx.lineTo(-560,0);
+ctx.fillText("-X",-560,0);
+ctx.lineWidth = 3;  
+ctx.strokeStyle = '#000000';    
+
+ctx.stroke();
+
+for(var coordinate=20;coordinate<=800;)
+{
+  ctx.moveTo(-560,coordinate);
+  ctx.lineTo(560,coordinate);
+  coordinate=coordinate+20;
+
+}
+
+for( coordinate=20;coordinate<=800;)
+{
+  ctx.moveTo(-560,-coordinate);
+  ctx.lineTo(560,-coordinate);
+  coordinate=coordinate+20;
+
+}
+
+for( coordinate=20;coordinate<=560;)
+{
+  ctx.moveTo(coordinate,560);
+  ctx.lineTo(coordinate,-560);
+  coordinate=coordinate+20;
+
+}
+for( coordinate=20;coordinate<=560;)
+{
+  ctx.moveTo(-coordinate,560);
+  ctx.lineTo(-coordinate,-560);
+  coordinate=coordinate+20;
+
+}
+
+ctx.lineWidth = 1;  
+ctx.strokeStyle = '#000000';    
+ctx.stroke();
+ctx.moveTo(0,0);
+</script>
+
+
+
+
+<div id="division">  
+  <form id="divform"> 
+    Equation: <input type="text" name="eq" /><br><br> 
+    Step: <input type="text" name="step" /><br><br> 
+    Start point: <input type="text" name="s_point" /><br><br> 
+    End point: <input type="text" name="e_point" /><br><br> 
+    <center><input type="button" value="Submit" onClick="getformdata(this.value)" /> 
+    <input type="button" value="default" onClick="getformdata( this.value )" /> 
+    </center>
+  </form> 
+</div> 
+
+</body> 
+</html>

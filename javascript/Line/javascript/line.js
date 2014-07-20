@@ -91,14 +91,51 @@ var lineObj = {
        
   
   
-  lineDraw: function(s_point,e_point,s)                //here is the method of lineObj that is lineMethod
+  lineDraw: function(s_point,e_point,step)                //here is the method of lineObj that is lineMethod
 
   { 
     var x1,y1,x,y;
     var temp=e_point-s_point;
-    var step=temp/s;
+ 
     var count=1;
     x=s_point;
+    
+for(var coordinate=step;coordinate<=800;)
+{
+  ctx.moveTo(-560,coordinate);
+  ctx.lineTo(560,coordinate);
+  coordinate=coordinate+step;
+
+}
+
+for( coordinate=step;coordinate<=800;)
+{
+  ctx.moveTo(-560,-coordinate);
+  ctx.lineTo(560,-coordinate);
+  coordinate=coordinate+step;
+
+}
+
+for( coordinate=step;coordinate<=560;)
+{
+  ctx.moveTo(coordinate,560);
+  ctx.lineTo(coordinate,-560);
+  coordinate=coordinate+step;
+
+}
+for( coordinate=step;coordinate<=560;)
+{
+  ctx.moveTo(-coordinate,560);
+  ctx.lineTo(-coordinate,-560);
+  coordinate=coordinate+step;
+
+}
+
+ctx.lineWidth = 1;  
+ctx.strokeStyle = '#000000';    
+ctx.stroke();
+ctx.moveTo(0,0);
+
 
   for(var count1=s_point;count1<=e_point;count1++)
   {
@@ -114,15 +151,15 @@ var lineObj = {
       y=(showx*x+showc)/showy;
       
     
-    x1=x*20;
-    y1=y*20;
+    //x1=x*20;
+   // y1=y*20;
    
     if(count==1)
-      ctx.moveTo(x1,y1);
+      ctx.moveTo(x,y);
     else
-      ctx.lineTo(x1,y1);
+      ctx.lineTo(x,y);
 
-    ctx.fillText("* "+x1+" "+y1,x1,y1);
+    ctx.fillText("* "+x+" "+y,x,y);
     count++;
     x=x+step;
   }
@@ -140,5 +177,26 @@ var lineObj = {
   
 } ;
 
+var canvas=document.getElementById('canvas');
+var ctx=canvas.getContext('2d');
+ctx.translate(canvas.width/2, canvas.height/2);
+ctx.scale(1, -1);
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(560, 0);
+ctx.fillText("X",560,0);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,400);
+ctx.fillText("Y",0,400);
+ctx.moveTo(0, 0);
+ctx.lineTo(0,-400);
+ctx.fillText("-Y",0,-400);
+ctx.moveTo(0,0);
+ctx.lineTo(-560,0);
+ctx.fillText("-X",-560,0);
+ctx.lineWidth = 3;  
+ctx.strokeStyle = '#000000';    
+
+ctx.stroke();
 
 
