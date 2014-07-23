@@ -1,0 +1,20 @@
+﻿Command for Question 1a:           echo "[$HOSTNAME]"
+Command for Question 1b:           cat /etc/*release
+Command for Question 1c :          $HOME
+Command for Question 1d :          w
+Command for Question 1e :          groups
+Command for Question 1f:           s -R $HOME | more 
+Command for Question  2:            for file in $(ls  *txt); do mv -v $file new$file; done 
+Command for Question  3:            for file in $(ls  x*); do mv -v $file new$file; done 
+Command for Question 5a:           mkdir public_html 
+Command for Question 5b:           cd public_html
+Command for Question 5c:           touch readme.txt
+Command for Question 5d:           chmod 777 readme.txt
+Command for Question 5e:           ls -l readme.txt
+Command for Question 6a:           ls
+Command for Question 6b:           for file in $(ls | head -n 4); do mv $file public_html/.; done 
+Command for Question 6c:             ls
+Command for Question 7a:             mkdir temp
+Command for Question 7b:             cp -r public_html temp
+Command for Question 7c:             cp -r temp/public_html public_html
+Command for Question 7d:             mv public_html my_html
