@@ -75,6 +75,7 @@ $(document).ready(function() {
 });
 
 
+
 $(document).ready(function() {
   $("#shuffle").click(function() {
     i= Math.floor(Math.random() * 10);
