@@ -78,20 +78,20 @@ $(document).ready(function() {
 $(document).ready(function() {
   $("#shuffle").click(function() {
     i= Math.floor(Math.random() * 10);
-    var content=document.getElementById(i).innerHTML;
-    document.getElementById(i).innerHTML=document.getElementById("1").innerHTML;
-    document.getElementById("1").innerHTML=content;
+    var content=$("#"+i).html();
+    $("#"+i).html($("#1").html());
+     $("#1").html(content);
     if(i==8)
     i--;
-    content=document.getElementById(i+2).innerHTML;
-    document.getElementById(i+2).innerHTML=document.getElementById("2").innerHTML;
-    document.getElementById("2").innerHTML=content;
-    content=document.getElementById(i-1).innerHTML;
-    document.getElementById(i-1).innerHTML=document.getElementById("3").innerHTML;
-    document.getElementById("3").innerHTML=content;
-    content=document.getElementById(i-2).innerHTML;
-    document.getElementById(i-2).innerHTML=document.getElementById("5").innerHTML;
-    document.getElementById("5").innerHTML=content;
+    content= $("#"+(i+2)).html();
+     $("#"+(i+2)).html( $("#2").html());
+    $("#2").html(content);
+    content=$("#"+(i-1)).html();
+    $("#"+(i-1)).html($("#3").html());
+    $("#3").html(content);
+    content=$("#"+(i-2)).html();
+    $("#"+(i-2)).html($("#5").html());
+    $("#5").html(content);
  
   }); 
 
