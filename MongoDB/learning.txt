@@ -1,0 +1,25 @@
+﻿I have installed mongoDB and after reading it I have found various understandings regarding
+it like.
+
+MongoDB is an open-source database used by companies of all sizes, across all industries and for a wide variety of applications. It is an agile database that allows schemas to change quickly as applications evolve.
+
+Any relational database has a typical schema design that shows number of tables and the relationship between these tables. While in MongoDB there is no concept of relationship.
+Advantages of MongoDB over RDBMS
+MongoDB is document database in which one collection holds different different documents. Number of fields, content and size of the document can be differ from one document to another.
+Structure of a single object is clear
+No complex joins
+Ease of scale-out: MongoDB is easy to scale(both vertical and horizontal Scaling )
+Uses internal memory for storing the (windowed) working set, enabling faster access of data
+Document Oriented Storage : Data is stored in the form of JSON style documents 
+Index on any attribute
+Replication & High Availability
+Auto-Sharding :-Sharding is a type of database partitioning that separates very large databases the into smaller, faster, more easily managed parts called data shards. The word shard means a small part of a whole.
+MongoDB works hard to be very easy to install, configure, maintain, and use. To this end, MongoDB provides few configuration options, and instead tries to automatically do the right thing whenever possible.
+
+No-SQL Databases follow BASE property rather than ACID
+
+Basically Available: This constraint states that the system does guarantee the availability of the data .There will be a response to any request. But, that response could still be ‘failure’ to obtain the requested data or the data may be in an inconsistent or changing state, much like waiting for a check to clear in your bank account.Use replication to reduce the likelihood of data unavailability and use sharding, or partitioning the data among many different storage servers, to make any remaining failures partial. The result is a system that is always available, even if subsets of the data become unavailable for short periods of time. 
+Soft state: The state of the system could change over time, so even during times without input there may be changes going on due to ‘eventual consistency,’ thus the state of the system is always ‘soft.’ While ACID systems assume that data consistency is a hard requirement, NoSQL systems allow data to be inconsistent .
+Eventual consistency: The system will eventually become consistent once it stops receiving input. The data will propagate to everywhere it should sooner or later, but the system will continue to receive input and is not checking the consistency of every transaction before it moves onto the next one.Although applications must deal with instantaneous consistency, NoSQL systems ensure that at some future point in time the data assumes a consistent state. In contrast to ACID systems that enforce consistency at transaction commit, NoSQL guarantees consistency only at some undefined future time.  
+
+

@@ -1,0 +1,173 @@
+﻿Ans 1> Schema
+
+ use myfirstdb;
+
+db.assesment.insert({ 
+	
+	"asses_id" : 1, 
+             “ asses_name” : “G.K”,
+          
+	"question" : [ 
+		{ 
+			"correct" : "state", 
+			"options" : [ 
+				{ 
+					"option1" : "new" 
+				}, 
+				{ 
+					"option2" : "unknown" 
+				} ,
+                                               {
+                                                            "option3" : "state" 
+                                                },
+
+                                                {
+                                                             "option4" : "old" 
+
+                                                }
+			], 
+			"que_id" : 1, 
+			"stmt" : "what is New Jersey" 
+		}, 
+		{ 
+			"correct" : "country", 
+			"options" : [ 
+				{ 
+					"option1" : "dew" 
+				}, 
+				{ 
+					"option2" : "known" 
+				} ,
+                                               {
+                                                            "option3" : "country" 
+                                                },
+
+                                                {
+                                                             "option4" : "gold" 
+
+                                                }
+			], 
+			"que_id" : 2, 
+			"stmt" : "what is India" 
+		} ,
+                        { 
+			"correct" : "sea", 
+			"options" : [ 
+				{ 
+					"option1" : "few" 
+				}, 
+				{ 
+					"option2" : "own" 
+				} ,
+                                               {
+                                                            "option3" : "coutry" 
+                                                },
+
+                                                {
+                                                             "option4" : "hold" 
+
+                                                }
+			], 
+			"que_id" : 3, 
+			"stmt" : "what is Arabian" 
+		} ,
+
+
+                       
+	] 
+} 
+)
+
+
+
+
+db.assesment.insert( { 
+	
+	"asses_id" : 2, 
+
+             “ asses_name” : “History”,
+
+	"question" : [ 
+		{ 
+			"correct" : "cooker", 
+			"options" : [ 
+				{ 
+					"option1" : "new" 
+				}, 
+				{ 
+					"option2" : "cooker" 
+				} ,
+                                               {
+                                                            "option3" : "state" 
+                                                },
+
+                                                {
+                                                             "option4" : "old" 
+
+                                                }
+			], 
+			"que_id" : 1, 
+			"stmt" : "what is Pressure" 
+		}, 
+		{ 
+			"correct" : "cruse", 
+			"options" : [ 
+				{ 
+					"option1" : "dew" 
+				}, 
+				{ 
+					"option2" : "known" 
+				} ,
+                                               {
+                                                            "option3" : "cruse" 
+                                                },
+
+                                                {
+                                                             "option4" : "gold" 
+
+                                                }
+			], 
+			"que_id" : 2, 
+			"stmt" : "what is Tom" 
+		} ,
+                        { 
+			"correct" : [“Lab”,”Organisation"], 
+			"options" : [ 
+				{ 
+					"option1" : "Lab" 
+				}, 
+				{ 
+					"option2" : "Organisation" 
+				} ,
+                                               {
+                                                            "option3" : "coutry" 
+                                                },
+
+                                                {
+                                                             "option4" : "hold" 
+
+                                                }
+			], 
+			"que_id" : 3, 
+			"stmt" : "what is Webonise" 
+		} ,
+
+
+                       
+	] 
+} 
+)
+
+Ans 2>Query for updating Assessment 1's question, and options to it.
+
+
+db.assess.update({ "asses_id" : "1","question.que_id": "2"}, {$set: {"question.$.stmt": "who is neymar"}}) 
+
+
+db.assessment.update({ "asses_id" : "1","question.que_id": "2"}, {$set: {"question.1.options.2.option1": "hello"}}) 
+
+
+Ans 3>Query for deleting Assessment 2's question 3's option 2.
+
+db.assess.update({ "asses_id" : "2","question.que_id": "3"}, {$unset: {"question.2.options.1": 1}}) 
+db.assess.update({ "asses_id" : "2","question.que_id": "3"}, {$pull: {"question.2.options": null}}) 
